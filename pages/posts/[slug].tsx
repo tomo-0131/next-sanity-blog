@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import { sanityClient, urlFor } from "../../sanity";
-import { Post } from "../../typings";
+import { Post } from "../../type";
 
 export const getStaticPaths = async() => {
   const query = `*[_type == "post"] {
