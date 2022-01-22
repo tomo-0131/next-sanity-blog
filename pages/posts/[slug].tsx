@@ -107,8 +107,8 @@ function Post({post}: Props) {
         </div>
       ) : (
       <form className='flex flex-col p-5 max-w-2xl mx-auto mb-10' onSubmit={handleSubmit(onSubmit)}>
-        <h3 className="text-sm text-teal-500">Enjoyed this article?</h3>
-        <h4 className="text-xl font-md">Let's leave a comment below.</h4>
+        <h3 className="text-sm text-teal-500">この投稿は参考になりましたか?</h3>
+        <h4 className="text-xl font-md">お気軽にコメントをお願いします!</h4>
 
         <hr className="py-3 mt-1" />
 
