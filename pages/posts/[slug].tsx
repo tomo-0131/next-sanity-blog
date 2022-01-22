@@ -1,8 +1,7 @@
 import { GetStaticProps } from "next";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import PortableText from "react-portable-text"
-import { sanityClient, urlFor } from "../../sanity";
+import { PortableText, sanityClient, urlFor } from "../../sanity";
 import { Post } from "../../type";
 interface Props {
   post: Post;
@@ -95,7 +94,7 @@ function Post({post}: Props) {
         </div>
       </article>
 
-      <hr className="max-w-xl my-5 mx-auto border border-yellow-500"/>
+      <hr className="max-w-xl my-5 mx-auto border border-teal-500"/>
 
       {submitted ? (
         <div>
@@ -108,7 +107,7 @@ function Post({post}: Props) {
         </div>
       ) : (
       <form className='flex flex-col p-5 max-w-2xl mx-auto mb-10' onSubmit={handleSubmit(onSubmit)}>
-        <h3 className="text-sm text-yellow-500">Enjoyed this article?</h3>
+        <h3 className="text-sm text-teal-500">Enjoyed this article?</h3>
         <h4 className="text-xl font-md">Let's leave a comment below.</h4>
 
         <hr className="py-3 mt-1" />
@@ -142,17 +141,17 @@ function Post({post}: Props) {
             <span className="text-red-500"> - コメント欄の入力は必須です</span>
           )}
         </div>
-        <input type="submit" className="shadow bg-yellow-500 hover:bg-yellow-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 rounded cursor-pointer" />
+        <input type="submit" className="shadow bg-teal-500 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 rounded cursor-pointer" />
       </form>
       )}
       {/* コメントエリア */}
-      <div  className="flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-yellow-500 shadow space-y-2">
+      <div  className="flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-teal-500 shadow space-y-2">
         <h3 className="text-3xl">Comments</h3>
         <hr className="pb-2" />
         {post.comments.map((comment) => (
           <div key={comment._id}>
             <p>
-              <span className="text-yellow-500">{comment.name}</span> : {comment.comment}
+              <span className="text-teal-500">{comment.name}</span> : {comment.comment}
             <span className="text-sm text-gray-500 float-right">
               {new Date(comment._createdAt).toLocaleString()}
             </span>
