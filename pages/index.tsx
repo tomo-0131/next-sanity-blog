@@ -21,9 +21,9 @@ export default function Home({posts}: Props) {
       <div className='flex justify-between items-center bg-teal-600 border-y border-black py-10 lg:py-0'>
         <div className='px-10 space-y-5 text-white'>
           <h1 className='text-6xl max-w-xl font-serif'>
-            <span className='underline decoration-white decoration-4'>
+            <p className='underline decoration-white decoration-4 transition hover:scale-105 ease-in-out duration-100 transition-transform'>
               Beardev
-            </span>
+            </p>
           </h1>
           <h2>
             It's easy and free to post my thinking on any topic and connect with millions of renders.
