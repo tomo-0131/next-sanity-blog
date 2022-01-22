@@ -4,6 +4,8 @@ export function blockContentToPlainText(blocks?: [any]): string;
  * @param {[object]} props.config
  * @param {string} props.className
  * @param {object} props.selializers
+ * @param {string} props.dataset
+ * @param {string} props.projectId
  * @returns
  */
 
@@ -11,7 +13,8 @@ declare function PortableText({
 	content,
 	className,
 	serializers,
-
+	dataset,
+	projectId,
 	...additionalOptions
 }: {
 	content: [object];

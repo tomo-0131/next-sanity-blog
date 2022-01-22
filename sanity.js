@@ -30,8 +30,3 @@ export const urlFor = (source) => createImageUrlBuilder(config).image(source);
 
 // Helper function for using the current logged in user account
 export const useCurrentUser = createCurrentUserHook(config);
-
-export const PortableText = createPortableTextComponent({
-	...config,
-	serializers: {},
-});
