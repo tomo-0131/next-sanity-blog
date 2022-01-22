@@ -151,7 +151,12 @@ function Post({post}: Props) {
         <hr className="pb-2" />
         {post.comments.map((comment) => (
           <div key={comment._id}>
-            <p>{comment.name} : {comment.comment}</p>
+            <p>
+              <span className="text-yellow-500">{comment.name}</span> : {comment.comment}
+            <span className="text-sm text-gray-500 float-right">
+              {new Date(comment._createdAt).toLocaleString()}
+            </span>
+            </p>
           </div>
         ))}
       </div>
